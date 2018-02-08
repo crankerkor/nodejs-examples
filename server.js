@@ -1,8 +1,10 @@
 const http = require('http');
 
-const public = require('./routes/public');
-const home = require('./routes/home');
-const notFound = require('./routes/notFound');
+const {
+  public,
+  home,
+  notFound
+} = require('./routes');
 
 http.createServer((req, res) => {
   if (req.url.match(/.(html|css|js|png)$/)) {
